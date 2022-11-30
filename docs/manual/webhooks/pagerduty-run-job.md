@@ -56,4 +56,21 @@ To begin, users must have a shared secret key from PagerDuty. In order to get th
 
 In the response body of the call above, there will be a "secret" key. The value for secret is the shared secret used to verify webhooks. Once that value has been returned, create a new password type key in Rundeck Key Storage.
 
-Now, when returning to the Webhook V3 definition as described above, select "Shared Secret" and then select the shared secret key from key storage. If the key doesn't match what was returned from PagerDuty, the webhook will not trigger the job successfully.
+Now, when returning to the Webhook V3 definition as described above, select "Shared Secret" and then select the shared secret key from key storage. If the key doesn't match what was returned from PagerDuty, the webhook will not trigger the job successfully.  
+
+
+
+
+
+
+**Add Webhook and obtain the Shared Secret Key from PagerDuty UI**
+
+1- In **PagerDuty** navigate to **Integrations** in the top menu and select Generic Webhooks (V3).  
+2- Click **New Webhook**.  
+3- Fill the Webhook URL.  
+4- Select the **Scope Type** (Service - Account - Team) and the **Scope**.  
+5- Select the **Event Subscription**.  
+6- Click in **Add Webhook** a popup will show with the **Shared Secret Key**, Copy and Save it in your Key Storage.  
+
+
+
